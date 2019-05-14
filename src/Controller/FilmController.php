@@ -12,13 +12,10 @@ class FilmController extends AbstractController
 {
     /**
      * @Route("/")
+     * @Method({"GET"})
      */
     public function index()
     {
-        $number = random_int(0, 100);
-
-        return $this->render('views/index.html.twig', [
-           'number' => $number,
-        ]);
+        return $this->render('Films/index.html.twig');
     }
 }
